@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multi-step Form</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/css/nice-select.css" />
+    <link rel="stylesheet" href="form.css">
+</head>
+<body>
+    <div class="multi_step_form">
+        <form id="msform">
+            <!-- Progressbar -->
+            <ul id="progressbar">
+                <li class="active">Step 1</li>
+                <li>Step 2</li>
+                <li>Step 3</li>
+            </ul>
+            <!-- Fieldsets -->
+            <fieldset>
+                <div class="tittle">
+                    <h2>Step 1</h2>
+                    <p>Fill in your basic information</p>
+                </div>
+                <input type="text" name="name" placeholder="Name" class="form-control" />
+                <input type="button" name="next" class="next action-button" value="Next" />
+            </fieldset>
+            <fieldset>
+                <div class="tittle">
+                    <h2>Step 2</h2>
+                    <p>Fill in your contact details</p>
+                </div>
+                <input type="tel" id="phone" name="phone" placeholder="Phone" class="form-control" />
+                <input type="button" name="previous" class="previous action-button-previous" value="Previous" />
+                <input type="button" name="next" class="next action-button" value="Next" />
+            </fieldset>
+            <fieldset>
+                <div class="tittle">
+                    <h2>Step 3</h2>
+                    <p>Confirm your details</p>
+                </div>
+                <select name="product" class="product_select form-control">
+                    <option value="">Select a product</option>
+                    <option value="product1">Product 1</option>
+                    <option value="product2">Product 2</option>
+                    <option value="product3">Product 3</option>
+                </select>
+                <input type="button" name="previous" class="previous action-button-previous" value="Previous" />
+                <input type="submit" name="submit" class="submit action-button" value="Submit" />
+            </fieldset>
+        </form>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/js/jquery.nice-select.min.js"></script>
+    <script src="form.js"></script>
+</body>
+</html>
